@@ -5,3 +5,4 @@ c = float(input( "enter lenght of side c"))
 #calculate the semi-premiter
 s = (a+ b+ + c) / 2
 #calculate using Heron formular
+area = 
