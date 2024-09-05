@@ -7,7 +7,7 @@ num2 = float(input("enter the 2ed number"))
 if operator == "+":
     result = num1 + num2
     print(result)
-elif operator =="-":
+elif operator == "-":
     print(result)
     result = num1 - num2
     print(result)
