@@ -1,24 +1,31 @@
-def is_special(num):
-    # Sum each digit raised to the power of itself
+# Function to check if a number is special
+def is_special_number(num):
+    original_num = num
+    num_digits = 0
     temp = num
-    sum_of_power = 0
+
+    # Find the number of digits using while loop
+    while temp > 0:
+        temp //= 10
+        num_digits += 1
+
+    # Recalculate the sum of the digits raised to the power of num_digits
+    temp = num
+    special_sum = 0
     while temp > 0:
         digit = temp % 10
-        sum_of_power += digit ** digit
+        special_sum += digit ** num_digits
         temp //= 10
 
-    # Check if sum is equal to the original number
-    return sum_of_power == num
+    # Return True if special_sum equals the original number
+    return special_sum == original_num
 
-# Display special numbers in a range
-def find_special_numbers(start, end):
-    for num in range(start, end + 1):
-        if is_special(num):
-            print(num)
+# Get user input for the range
+start = int(input("Enter Start of Range: "))
+end = int(input("Enter End of Range: "))
 
-# Input for range (should be outside the function)
-start = int(input("Start of the range: "))
-end = int(input("End of the range: "))
-
-# Find and display special numbers
-find_special_numbers(start, end)
+# Print the special numbers in the range
+print(f"Special Numbers between {start} and {end}")
+for num in range(start, end + 1):
+    if is_special_number(num):
+        print(num)
