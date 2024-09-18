@@ -1,0 +1,29 @@
+from random import randint
+
+#greeting user
+name = input("hello what is your name")
+print(f"hello,{name}, i am thinking of number 1 and 20.")
+print(f"you have 5 guess")
+
+#prepare random number
+random_number = randint (1, 20)
+
+#play game for 5 round
+for guess_count in range(1,6):
+    guess = int(input(guess{guess_count}: enter a number between 1 and 20: ))
+
+#if guess greater than random number
+    if guess > random_number:
+        print("too high")
+
+#if guess lesser than random number
+    elif guess < random_number:
+        print("too low")
+
+#if guess equal to random number, the game end
+    else:
+        print(f"congratulation, {name} you guess the number in {guess_count} tries.")
+        break
+#if user is loosing, print the message with random  jumber
+else:
+    print("sorry {name} you use all 5 guess, the number i am thinking was {random_number} ")
