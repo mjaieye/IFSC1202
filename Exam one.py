@@ -10,7 +10,7 @@ random_number = randint (1, 20)
 
 #play game for 5 round
 for guess_count in range(1,6):
-    guess = int(input(f"guess{guess_count}: enter a number between 1 and 20: "))
+    guess = int(input("take a guess"))
 
 #if guess greater than random number
     if guess > random_number:
@@ -22,8 +22,8 @@ for guess_count in range(1,6):
 
 #if guess equal to random number, the game end
     else:
-        print(f"congratulation, {name} you guess the number in {guess_count} tries.")
+        print(f"congratulation, {name} you guess the number in {guess_count} guess.")
         break
 #if user is loosing, print the message with random  jumber
 else:
-    print("nope the number i was thinkink of was {random_number} ")
+    print(f"nope, the number i was thinkink of was {random_number}.")
