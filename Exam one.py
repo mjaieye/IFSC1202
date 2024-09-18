@@ -10,15 +10,15 @@ random_number = randint (1, 20)
 
 #play game for 5 round
 for guess_count in range(1,6):
-    guess = int(input(guess{guess_count}: enter a number between 1 and 20: ))
+    guess = int(input(f"guess{guess_count}: enter a number between 1 and 20: "))
 
 #if guess greater than random number
     if guess > random_number:
-        print("too high")
+        print("your guess is too high")
 
 #if guess lesser than random number
     elif guess < random_number:
-        print("too low")
+        print("your guess is too low")
 
 #if guess equal to random number, the game end
     else:
@@ -26,4 +26,4 @@ for guess_count in range(1,6):
         break
 #if user is loosing, print the message with random  jumber
 else:
-    print("sorry {name} you use all 5 guess, the number i am thinking was {random_number} ")
+    print("nope the number i was thinkink of was {random_number} ")
