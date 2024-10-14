@@ -5,7 +5,7 @@ def main():
 
     while True:
         #promp for search
-        search_term = input("enter a search term").strip()
+        search_term = input("Enter a search term: ").strip()
         if not search_term:
             break
 
@@ -26,4 +26,9 @@ def main():
                 for j in range(section_start, section_end + 1):
                     print(lines[j])
 
-                    i = section_end
+                i = section_end
+                i += 1
+
+
+if __name__ == "__main__":
+    main()
