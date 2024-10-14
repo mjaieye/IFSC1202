@@ -10,7 +10,7 @@ def main():
             break
 
         #loop each line for search term
-        for i, line in enumerate(line):
+        for i, line in enumerate(lines):
             if search_term.lower() in line.lower():
                 section_start = i
                 while section_start > 0 and lines[section_start - 1] != '':
@@ -26,6 +26,4 @@ def main():
                 for j in range(section_start, section_end + 1):
                     print(lines[j])
 
-                i = section_end
-        
-
+                    i = section_end
