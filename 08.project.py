@@ -22,5 +22,10 @@ def main():
                     section_end += 1
 
                 #print the search term
+                print(f"\nFound at line {i +1}:")
+                for j in range(section_start, section_end + 1):
+                    print(lines[j])
+
+                i = section_end
         
 
