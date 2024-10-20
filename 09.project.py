@@ -2,7 +2,7 @@ import csv
 
 #read csv file
 filename = '09.Prpject Distances.cvs'
-with open(filename, mode='r') as file:
+with open(filename, mode = 'r') as file:
     reader = csv.reader(file)
     data = list(reader)
 
