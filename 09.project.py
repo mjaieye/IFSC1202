@@ -1,8 +1,8 @@
 import csv
 
 #read csv file
-filename = '09.Prpject Distances.cvs'
-with open(filename, mode = 'r') as file:
+filename = '09.Project Distances.csv'
+with open(filename, mode='r') as file:
     reader = csv.reader(file)
     data = list(reader)
 
@@ -27,8 +27,10 @@ for i, row in enumerate(data):
 #frind the index to city
 if data:
     for j, city in enumerate(data[0]):
-        to_city_index = j
-        break
+        if city.lower() == to_city.lower():
+            to_city_index = j
+            break
+        
 
 #check for invalid city
 if from_city_index == -1:
