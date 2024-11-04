@@ -50,5 +50,5 @@ def display_student_info(students):
         letter_grade = student.lettergrade()
         print(f"{student.firstname:<12} {student.lastname:<12} {student.tnumber:<:10} {running_avg:<15.2f} {letter_grade:<10}")
 
-students = read_student_data("10.project student scores.txt")
+students = read_student_data("10.project student score.txt")
 display_student_info(students)
