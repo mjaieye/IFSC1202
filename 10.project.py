@@ -48,17 +48,17 @@ def process_students(file_path):
             students.append(Student(firstname, lastname, tnumber, scores))
     return students
 
-# Function to print the report
+# print the report
 def print_report(students):
     # Print the header
-    print(f"{'First Name':>10} {'Last Name':>10} {'ID':>10} {'Running Average':>12} {'Semester Average':>12} {'Letter Grade':>12}")
+    print(f"{'First Name':>10}   {'Last Name':>10} {'ID':>10} {'Running Average':>12} {'Semester Average':>12} {'Letter Grade':>12}")
     print("-" * 66)
     # Print each student's information
     for student in students:
         print(f"{student.FirstName:>10} {student.LastName:>10} {student.TNumber:>10} "
               f"{student.RunningAverage():>12.2f} {student.TotalAverage():>12.2f} {student.LetterGrade():>12}")
 
-# Main program logic
+#program logic
 if __name__ == "__main__":
     # Load the student data from the file and create student objects
     students = process_students('10.project student score.txt')
